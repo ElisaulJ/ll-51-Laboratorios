@@ -6,6 +6,7 @@ classDiagram
         -carrera: string
         +registrar(): void
         +editarPerfil(): void
+        +consultarCursosDisponibles(): List<curso>
         +consultarCurso(): List<Curso>
     }
 
@@ -17,4 +18,23 @@ classDiagram
         +retirar(): void
     }
 
-    Estudiante "1" --> "*" Curso: matrtricula
+    class Periodo {
+        -anio: int
+        -nombre: string
+        -activo: boolean
+        +iniciarPeriodo(): void
+        +finalizarPeriodo(): void
+    }
+
+    class PeriodoCurso {
+        -idCurso: string
+        -idPeriodo: int
+        -idProfesor: int
+        -horario: string
+        +asignarProfesor:() void
+        +definirHorario(): void 
+    }
+
+    Estudiante "1" --> "*" PeriodoCurso: matrtricula
+    Curso "1" --> "*" Periodo : ofrecida en 
+    Periodo "1" --> "*" PeriodoCurso : contiene
