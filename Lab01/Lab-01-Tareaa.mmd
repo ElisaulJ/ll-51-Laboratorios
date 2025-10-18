@@ -1,0 +1,73 @@
+classDiagram
+    class Estudiante {
+        -id: int
+        -nombre: string
+        -email: string
+        -idCarrera: int
+        +registrar(): void
+        +editarPerfil(): void
+        +consultarCursosDisponibles(): List<Curso>
+        +consultarCursosMatriculados(): List<Curso>
+    }
+
+    class Matricula {
+        -idMatricula: int
+        -idEstudiante: int
+        -idGrupo: int
+        -fecha: date
+        +matricular(): void
+        +retirar(): void
+    }
+
+    class Grupo {
+        -id_grupo: int
+        -idCurso: int
+        -idProfesor: int
+        -idPeriodo: int
+        -capacidad: int
+        -numero_grupo: int
+        -horario: string
+        +agregarEstudiante(): void
+        +consultarEstudiantes(): List<Estudiante>
+    }
+
+    
+    class Periodo {
+        idPeriodo: int 
+        -anio: int
+        -nombre: string
+        -activo: boolean
+        +iniciarPeriodo(): void
+        +finalizarPeriodo(): void
+    }
+
+    class Curso {
+        -codigo: string
+        -nombre: string
+        -creditos: int
+        +consultarCursos(): list<Curso>
+    
+    }
+
+    class Profesor {
+        -idProfesor: int
+        -nombre: string
+        -correo: string
+        +asignarCurso(): void
+        +consultarCursos(): List<Curso>
+    }
+
+    class Periodo {
+        idPeriodo: int 
+        -anio: int
+        -nombre: string
+        -activo: boolean
+        +iniciarPeriodo(): void
+        +finalizarPeriodo(): void
+    }
+
+    Estudiante "1" --> "*" Matricula : realiza
+    Matricula "1" --> "1" Grupo : de
+    Grupo "1" --> "1" Curso : ofrece
+    Grupo "1" --> "1" Profesor : impartido por
+    Grupo "1" --> "1" Periodo: en 
