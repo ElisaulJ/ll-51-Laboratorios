@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #bd1010;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        table {
+            width: auto;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        th {
+             color: #0e181e; /* Azul claro (puedes cambiar el color) */
+        }
+
+
+        a {
+            color: rgb(0, 128, 21);
+            text-decoration: underline;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lab 2</h1>
+
+    <p>Este es el primer laboratorio de la asignatura.</p>
+
+    <p>En este laboratorio, aprenderemos los conceptos básicos de HTML y CSS.</p>
+
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h2>Objetivos</h2>
+    <ul>
+        <li>Aprender a crear una página web básica</li>
+        <li>Familiarizarse con las etiquetas HTML</li>
+        <li>Entender el uso de CSS para el estilo</li>
+    </ul>
+
+    <h2>Tablas</h2>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Elisaul</td>
+            <td>33</td>
+            <td>San Jose </td>
+        </tr>
+        <tr>
+            <td>Fernanda</td>
+            <td>30</td>
+            <td>Cartago</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>50</td>
+            <td>Heredia</td>
+        </tr>
+    </table>
+
+  <!-- Imagen de naturaleza -->
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+         alt="Naturaleza" width="400">
+
+         <p>Visita nuestro sitio web.<br>
+    <a href="m" target="_blank">
+        Para más información, consulta el sitio web oficial.
+    </a></p>
+
+</body>
+</html>
